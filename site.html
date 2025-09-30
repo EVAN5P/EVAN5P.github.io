@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>High Security Entreprise — Cybersécurité</title>
+  <meta name="description" content="High Security Entreprise — Audit, pentest, formation et protection des données pour PME" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#05010a;
+      --card:#0b0018;
+      --accent:#f72585;
+      --accent2:#4cc9f0;
+      --muted:#bdb4c7;
+      --glass:rgba(255,255,255,0.05);
+      --glow:0 0 10px var(--accent),0 0 20px var(--accent2);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:radial-gradient(circle at top,#0a0018,#05010a 60%);} 
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-family:Orbitron, sans-serif;box-shadow:var(--glow)}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:0.3s}
+    nav a:hover{color:var(--accent);text-shadow:0 0 8px var(--accent2)}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:var(--glow);transition:0.3s}
+    .btn:hover{background:var(--accent2);box-shadow:0 0 12px var(--accent2),0 0 24px var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);padding:28px;border-radius:14px;box-shadow:0 0 20px rgba(247,37,133,0.2),0 0 30px rgba(76,201,240,0.1);} 
+    h1,h2,h3{font-family:Orbitron, sans-serif;letter-spacing:1px}
+    h1{margin:0 0 12px;font-size:30px;text-shadow:var(--glow)}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .kpis{display:flex;gap:12px;margin-top:18px}
+    .kpi{background:var(--glass);padding:12px;border-radius:10px;text-align:center;min-width:110px;box-shadow:inset 0 0 12px rgba(76,201,240,0.2)}
+    .kpi strong{display:block;font-size:18px;color:var(--accent2)}
+
+    .card-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .service-card{background:rgba(255,255,255,0.04);padding:16px;border-radius:10px;transition:0.3s;box-shadow:inset 0 0 10px rgba(247,37,133,0.2)}
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 0 15px var(--accent2),0 0 30px var(--accent)}
+    .service-card h3{margin:0 0 8px;font-size:16px;color:var(--accent)}
+    .service-card p{margin:0;color:var(--muted);font-size:14px}
+
+    form.contact{background:linear-gradient(180deg,#0b0018,transparent);padding:18px;border-radius:12px;box-shadow:inset 0 0 20px rgba(76,201,240,0.2)}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--accent2)}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:rgba(0,0,0,0.4);color:#e6eef6}
+    textarea{min-height:110px}
+    input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:var(--glow)}
+
+    .muted{color:var(--muted);font-size:13px}
+
+    footer{margin-top:36px;padding:18px 0;border-top:1px dashed rgba(255,255,255,0.08);color:var(--muted);display:flex;justify-content:space-between;align-items:center;font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .card-list{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:520px){
+      nav{display:none}
+      header{gap:12px}
+      .card-list{grid-template-columns:1fr}
+    }
+
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(247,37,133,0.12);color:var(--accent);font-weight:700;font-family:Orbitron,sans-serif;box-shadow:0 0 8px rgba(247,37,133,0.6)}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">HSE</div>
+        <div>
+          <div style="font-weight:700">High Security Entreprise</div>
+          <div class="small muted">Cybersécurité & défense numérique</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#prix">Tarifs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn" href="#contact">Demander un audit</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <span class="badge">Sécurité</span>
+          <h1>Protégez vos données. Défendez votre entreprise.</h1>
+          <p class="lead">High Security Entreprise propose des audits, tests d'intrusion (pentests) et solutions de protection adaptées aux PME/TPE, cabinets et e‑commerces.</p>
+
+          <div class="kpis">
+            <div class="kpi"><strong>+250</strong><span class="small muted">Systèmes audités</span></div>
+            <div class="kpi"><strong>99%</strong><span class="small muted">Clients satisfaits</span></div>
+            <div class="kpi"><strong>24/7</strong><span class="small muted">Surveillance</span></div>
+          </div>
+
+          <div class="card-list">
+            <div class="service-card">
+              <h3>Audit & Pentest</h3>
+              <p>Simulation d'attaques pour identifier les vulnérabilités et proposer des correctifs précis.</p>
+            </div>
+            <div class="service-card">
+              <h3>Protection & Monitoring</h3>
+              <p>Mise en place de pare-feu, IDS/IPS, et monitoring pour détecter les incidents en temps réel.</p>
+            </div>
+            <div class="service-card">
+              <h3>Chiffrement & Sauvegarde</h3>
+              <p>Stratégies de backup inviolables et chiffrement des données sensibles.</p>
+            </div>
+            <div class="service-card">
+              <h3>Formation Anti‑Phishing</h3>
+              <p>Sensibilisation des équipes : exercices, supports et évaluations pratiques.</p>
+            </div>
+            <div class="service-card">
+              <h3>Conformité & RGPD</h3>
+              <p>Audit de conformité et documentation pour les obligations légales liées aux données personnelles.</p>
+            </div>
+            <div class="service-card">
+              <h3>Support & Intervention</h3>
+              <p>Plan de réponse aux incidents (IRP) et intervention rapide en cas de compromission.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2 style="margin-top:0">Obtenez un diagnostic gratuit</h2>
+          <p class="muted small">Laissez vos coordonnées et nous vous contactons pour une évaluation initiale sans engagement.</p>
+
+          <form id="leadForm" class="contact" onsubmit="return submitLead(event)">
+            <label for="name">Nom & Prénom</label>
+            <input id="name" name="name" placeholder="Ex : Sophie Dupont" required>
+
+            <label for="company">Entreprise</label>
+            <input id="company" name="company" placeholder="Nom de l'entreprise">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="contact@entreprise.com" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Décrivez brièvement vos besoins"></textarea>
+
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <button type="submit" class="btn">Demander un diagnostic</button>
+              <a href="#services" style="align-self:center;color:var(--muted);text-decoration:none">Voir les services</a>
+            </div>
+
+            <p id="formMsg" class="muted small" style="margin-top:10px;display:none"></p>
+          </form>
+        </aside>
+      </section>
+
+      <section id="expertise" style="margin-top:28px">
+        <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px" class="hero-card">
+            <h2>Notre approche</h2>
+            <p class="muted">Analyse pragmatique, rapports clairs et plans d'action priorisés. Nous travaillons avec vos équipes pour déployer les correctifs et améliorer la résilience.</p>
+            <ul class="muted small">
+              <li>Évaluation initiale & plan de remédiation</li>
+              <li>Tests d'intrusion réguliers</li>
+              <li>Formation continue des employés</li>
+            </ul>
+          </div>
+
+          <div style="width:320px" class="hero-card">
+            <h3 style="margin-top:0">Tech & outils</h3>
+            <p class="muted small">Nous utilisons des outils reconnus : audits manuels, scanners, IDS, et solutions de chiffrement pour garantir une défense multicouche.</p>
+            <div style="margin-top:10px"><span class="badge">Nessus</span> <span class="badge">Wireshark</span> <span class="badge">Metasploit</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <div class="hero-card">
+          <h2>Contact</h2>
+          <p class="muted">Remplacez ces informations par vos coordonnées réelles dans le fichier HTML.</p>
+          <div style="display:flex;gap:18px;flex-wrap:wrap">
+            <div style="min-width:240px">
+              <p><strong>Téléphone</strong><br><span class="muted">+33 6 12 34 56 78</span></p>
+              <p><strong>Email</strong><br><span class="muted">contact@highsecurity.fr</span></p>
+              <p><strong>Adresse</strong><br><span class="muted">Ville, France</span></p>
+            </div>
+            <div style="flex:1;min-width:240px">
+              <h4>Horaires</h4>
+              <p class="muted small">Lun - Ven: 9:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="prix" style="margin-top:18px">
+        <div class="hero-card">
+          <h2>Formules & tarifs (exemple)</h2>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <h3>Diagnostic express</h3>
+              <p class="muted small">Audit rapide — bon pour PME — durée : 1 à 3 jours</p>
+              <p><strong>À partir de 900€</strong></p>
+            </div>
+            <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <h3>Pentest complet</h3>
+              <p class="muted small">Tests manuels + recommandations — durée : 1 à 2 semaines</p>
+              <p><strong>À partir de 4200€</strong></p>
+            </div>
+            <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <h3>Surveillance & SLA</h3>
+              <p class="muted small">Monitoring 24/7 et intervention prioritaire</p>
+              <p><strong>Mensuel — sur devis</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> High Security Entreprise — Tous droits réservés</div>
+      <div class="muted">Site d'exemple — personnalisez les contenus et les coordonnées</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function submitLead(e){
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var msg = document.getElementById('formMsg');
+      if(!name || !email){
+        msg.style.display='block'; msg.textContent='Merci de renseigner le nom et l\'email.'; return false;
+      }
+      msg.style.display='block'; msg.textContent='Merci — demande reçue. (Formulaire exemple : configurez ici l\'envoi côté serveur)';
+      return false;
+    }
+  </script>
+</body>
+</html>
